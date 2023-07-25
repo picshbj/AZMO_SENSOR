@@ -15,7 +15,7 @@ SENSOR_STATUS = False
 SERIAL_WATCHDOG = 0
 
 
-VERSION = '4.0'
+VERSION = '4.1'
 
 
 
@@ -254,7 +254,7 @@ async def recv_handler(ws):
                 os.system('shutdown -r now')
             
             elif d['METHOD'] == 'OTA':
-                os.system('wget -P /home/pi/ https://raw.githubusercontent.com/picshbj/ATMOV3/main/main.py')
+                os.system('wget -P /home/pi/ https://raw.githubusercontent.com/picshbj/AZMO_SENSOR/main/main.py')
                 
                 path_src = '/home/pi/main.py'
                 path_dest = '/home/pi/Documents/main.py'
